@@ -8,7 +8,7 @@ Works on:
 
 Limitations:
 * On Chrome for macOS it is only possible to share your audio when choosing to capture a Chrome tab
-* Firefox does not yet support capture for system sounds
+* Firefox does not yet support capturing for system sounds
 
 Links:
 * [Live demo of this code](https://addpipe.com/get-display-media-demo/)
