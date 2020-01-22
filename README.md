@@ -1,13 +1,13 @@
 # getDisplayMedia-demo
 
-A screen recording demo with system sounds using `getDisplayMedia()`
+This demo uses `getDisplayMedia()` and the `Media Stream Recording API` to record the screen, your microphone & system sounds on Chrome.
 
 Works on:
 * Chrome 74 and up
-* Firefox 66 and up
 
 Limitations:
-* On Chrome for macOS it is only possible to share your audio when choosing to capture a Chrome tab
+* The user needs to opt in to sharing system sounds in the Chrome screen sharing dialog
+* On Chrome for macOS & Linux it is only possible to share your audio when choosing to capture a Chrome tab
 * Firefox does not yet support capturing for system sounds
 
 Links:
