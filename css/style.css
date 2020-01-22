@@ -1,9 +1,39 @@
 body {
-  font-family: sans-serif;
-  font-weight: 300;
-  margin: 0;
-  padding: 1em;
-  word-break: break-word;
+	line-height: 1.5;
+	font-family: sans-serif;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	color:black;
+	margin:2em;
+}
+
+h1 {
+	text-decoration: underline red;
+	text-decoration-thickness: 3px;
+	text-underline-offset: 6px;
+	font-size: 220%;
+	font-weight: bold;
+}
+
+h2 {
+	font-weight: bold;
+	color: #005A9C;
+	font-size: 140%;
+	text-transform: uppercase;
+}
+
+p {
+	margin: 1em 0;
+}
+
+pre {
+	padding: 0px;
+	border:0px;
+	border-radius: 0px;
+}
+
+red {
+	color: red;
 }
 
 a {
@@ -27,19 +57,6 @@ div#container {
   margin: 0 auto 0 auto;
   max-width: 720px;
   padding: 1em 1.5em 1.3em 1.5em;
-}
-
-h1 {
-  font-family: sans-serif;
-  font-weight: 500;
-}
-
-h2 {
-  color: #444;
-  font-size: 1em;
-  font-weight: 500;
-  line-height: 1.2em;
-  margin: 0 0 0.8em 0;
 }
 
 h3 {
@@ -67,4 +84,46 @@ video {
   margin: 10px auto;
   width: 640px;
   height: 360px;
+}
+
+#controls {
+  display: flex;
+  margin-top: 2rem;
+  max-width: 28em;
+}
+
+button {
+  flex-grow: 1;
+  height: 3.5rem;
+  min-width: 2rem;
+  border: none;
+  border-radius: 0.15rem;
+  background: #ed341d;
+  margin-left: 2px;
+  box-shadow: inset 0 -0.15rem 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#ffffff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+button:hover, button:focus {
+  outline: none;
+  background: #c72d1c;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+button:active {
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+  line-height: 3rem;
+}
+button:disabled {
+  pointer-events: none;
+  background: lightgray;
+}
+button:first-child {
+  margin-left: 0;
 }

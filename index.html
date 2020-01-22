@@ -3,26 +3,28 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta id="theme-color" name="theme-color" content="#fff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base target="_blank">
   <title>Screen Recording With System Sounds Demo</title>
   
+  <!-- Latest compiled and minified Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <div id="container">
-    <div style="text-align:center;">
+  
+    <div>
       <h1>Screen Recording With System Sounds Demo</h1>
       <p><small>Made by the <a href="https://addpipe.com">Pipe Recording Platform</a></small></p>
       <h2>Record the screen using <strong>getDisplayMedia</strong> and <strong>Media​Stream Recording API</strong></h2>
       <video controls autoplay></video><br>
-      <button id="shareScreen" onclick="onShareScreen()">Share Screen</button>
-      <button id="rec" onclick="onBtnRecordClicked()" disabled>Record</button>
-      <button id="stop" onclick="onBtnStopClicked()" disabled>Stop</button>
-      <button id="stateButton" onclick="onStateClicked()">trace state</button>
+	  <div id="controls">
+		  <button id="shareScreen" onclick="onShareScreen()">Share Screen</button>
+		  <button id="rec" onclick="onBtnRecordClicked()" disabled>Record</button>
+		  <button id="stop" onclick="onBtnStopClicked()" disabled>Stop</button>
+		  <button id="stateButton" onclick="onStateClicked()">trace state</button>
+	  </div>
     </div>
     <a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href></a>
     <p id="data"></p>
@@ -42,6 +44,5 @@
 	<ul>
 		<li>Code for this demo on GitHub: <a target="_blank" href="https://github.com/addpipe/getDisplayMedia-demo">https://github.com/addpipe/getDisplayMedia-demo</a></li>
 	</ul>
-  </div>
 </body>
 </html>
