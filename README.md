@@ -1,4 +1,4 @@
-# getDisplayMedia-demo
+# getDisplayMedia() Demo
 
 This demo uses `getDisplayMedia()` and the `Media Stream Recording API` to record the screen, your microphone & system sounds on Chrome.
 
