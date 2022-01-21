@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base target="_blank">
-  <title>Screen Recording With System Sounds Demo</title>
+  <title>Screen Recording With System Sounds Demo - addpipe.com</title>
   
-  <!-- Latest compiled and minified Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  
     <div>
-      <h1>Screen Recording With System Sounds Demo</h1>
+      <h1>Recording Your Screen With System Sounds Demo</h1>
       <p><small>Made by the <a href="https://addpipe.com">Pipe Recording Platform</a></small></p>
-      <h2>Record the screen using <strong>getDisplayMedia</strong> and <strong>Media​Stream Recording API</strong></h2>
+      <p>This demo uses <strong>getDisplayMedia()</strong> and the <strong>Media​Stream Recording API</strong> to record the screen, your microphone <em>AND</em> system sounds on Chrome.</p>
       <video controls autoplay></video><br>
-	  <div id="controls">
-		  <button id="shareScreen" onclick="onShareScreen()">Share Screen</button>
-		  <button id="rec" onclick="onBtnRecordClicked()" disabled>Record</button>
-		  <button id="stop" onclick="onBtnStopClicked()" disabled>Stop</button>
-		  <button id="stateButton" onclick="onStateClicked()">trace state</button>
-	  </div>
+  	  <div id="controls">
+  		  <button id="shareScreen" onclick="onShareScreen()">Share Screen</button>
+  		  <button id="rec" onclick="onBtnRecordClicked()" disabled>Record</button>
+  		  <button id="stop" onclick="onBtnStopClicked()" disabled>Stop</button>
+  		  <button id="stateButton" onclick="onStateClicked()">trace state</button>
+  	  </div>
     </div>
     <a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href></a>
     <p id="data"></p>
     <script src="https://webrtchacks.github.io/adapter/adapter-latest.js"></script>
-	<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
     <h2>Works on:</h2>
     <ul>
       <li>Chrome 74 and up</li>
-      <li>Firefox 66 and up</li>
     </ul>
     <span style="color:red">Limitations:</span>
     <ul>
-      <li>On Chrome for macOS it is only possible to share your audio when choosing to capture a Chrome tab </li>
+      <li>The user needs to opt in to sharing system sounds in the Chrome screen sharing dialog</li>
+      <li>On Chrome on macOS &amp; Linux it is only possible to share your audio when choosing to capture a Chrome tab</li>
       <li>Firefox does not yet support capturing system sounds</li>
     </ul>
 	<h2>Links:</h2>
