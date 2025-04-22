@@ -4,15 +4,17 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base target="_blank">
-  <title>Screen Recording With System Sounds Demo - addpipe.com</title>
+  <title>Using getDisplayMedia to record the screen, system/browser tab audio, and the microphone.</title>
   
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
     <div>
-      <h1>Recording Your Screen With System Sounds Demo</h1>
+      <h1>Using <strong>getDisplayMedia</strong> to record the screen, system/browser tab audio, and the microphone.</h1>
       <p><small>Made by the <a href="https://addpipe.com">Pipe Recording Platform</a></small></p>
-      <p>This demo uses <strong>getDisplayMedia()</strong> and the <strong>Media​Stream Recording API</strong> to record the screen, your microphone <em>AND</em> system sounds on Chrome.</p>
+      <p>This demo uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia" target="_blank" rel="noopener noreferrer"><code>getDisplayMedia()</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia" target="_blank" rel="noopener noreferrer"><code>getUserMedia()</code></a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API" target="_blank" rel="noopener noreferrer"><code>MediaStream Recording API</code></a> to record the screen, the system/tab audio AND your microphone on Chrome.</p>
+      <p>When you click the “Share Screen” button, the browser may also offer the option to include system or tab audio. This is supported in browsers like Chrome. If you select that option, the demo captures the system audio directly from the screen stream.</p>
+      <p>To ensure both microphone and system audio are included in the final recording, the demo uses the <code>Web Audio API</code> to combine the two audio sources in real time. The microphone stream is captured using <code>getUserMedia()</code>, while the system audio is captured as part of the screen stream via <code>getDisplayMedia()</code>. These two audio tracks are mixed together and merged with the video track into a single stream. This composed stream is then passed to the MediaRecorder, which produces a single .webm file containing your screen video, microphone input, and system or tab audio, if available.</p>
       <video controls autoplay></video><br>
   	  <div id="controls">
   		  <button id="shareScreen" onclick="onShareScreen()">Share Screen</button>
@@ -23,21 +25,26 @@
     </div>
     <a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href></a>
     <p id="data"></p>
-    <script src="https://webrtchacks.github.io/adapter/adapter-latest.js"></script>
+    <script src="js/adapter-latest.js"></script>
     <script src="js/main.js"></script>
     <h2>Works on:</h2>
     <ul>
-      <li>Chrome 74 and up</li>
+      <li>Chrome 72 and above (with system/tab audio)</li>
+      <li>Edge 79 and above</li>
+      <li>Firefox 66 and above</li>
+      <li>Opera 60 and above</li>
     </ul>
     <span style="color:red">Limitations:</span>
     <ul>
-      <li>The user needs to opt in to sharing system sounds in the Chrome screen sharing dialog</li>
-      <li>On Chrome on macOS &amp; Linux it is only possible to share your audio when choosing to capture a Chrome tab</li>
-      <li>Firefox does not yet support capturing system sounds</li>
+      <li>Sharing the system sound is only possible on Chrome on Windows, and the user needs to opt in</li>
+      <li>Sharing tab audio is possible on Chrome on macOS, Windows, and the option is preselected</li>
+      <li>Firefox and Safari do not support capturing system audio or tab audio</li>
     </ul>
 	<h2>Links:</h2>
 	<ul>
 		<li>Code for this demo on GitHub: <a target="_blank" href="https://github.com/addpipe/getDisplayMedia-demo">https://github.com/addpipe/getDisplayMedia-demo</a></li>
+    <li><a href="https://www.w3.org/TR/screen-capture/" target="_blank" rel="noopener noreferrer">W3C Spec</a></li>
+    <li><a href="https://blog.addpipe.com/screen-recording-with-system-sounds-in-chrome/" target="_blank" rel="noopener noreferrer">Product Announcement</a></li>
 	</ul>
 </body>
 </html>
