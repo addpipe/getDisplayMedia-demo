@@ -16,12 +16,12 @@
       <p>When you click the “Share Screen” button, the browser may also offer the option to include system or tab audio. This is supported in browsers like Chrome. If you select that option, the demo captures the system audio directly from the screen stream.</p>
       <p>To ensure both microphone and system audio are included in the final recording, the demo uses the <code>Web Audio API</code> to combine the two audio sources in real time. The microphone stream is captured using <code>getUserMedia()</code>, while the system audio is captured as part of the screen stream via <code>getDisplayMedia()</code>. These two audio tracks are mixed together and merged with the video track into a single stream. This composed stream is then passed to the MediaRecorder, which produces a single .webm file containing your screen video, microphone input, and system or tab audio, if available.</p>
       <video controls autoplay></video><br>
-  	  <div id="controls">
-  		  <button id="shareScreen" onclick="onShareScreen()">Share Screen</button>
-  		  <button id="rec" onclick="onBtnRecordClicked()" disabled>Record</button>
-  		  <button id="stop" onclick="onBtnStopClicked()" disabled>Stop</button>
-  		  <button id="stateButton" onclick="onStateClicked()">trace state</button>
-  	  </div>
+      <div id="controls">
+        <button id="shareScreen" onclick="onShareScreen()">Share Screen</button>
+        <button id="rec" onclick="onBtnRecordClicked()" disabled>Record</button>
+        <button id="stop" onclick="onBtnStopClicked()" disabled>Stop</button>
+        <button id="stateButton" onclick="onStateClicked()">trace state</button>
+      </div>
     </div>
     <a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href></a>
     <p id="data"></p>
@@ -41,12 +41,12 @@
       <li>Capturing system audio is possible on Chrome 74+ (and other Chromium based browsers like Edge and Opera) on Windows and ChromeOS when sharing the entire screen, and the user needs to opt in</li>
       <li>Capturing tab audio is possible on Chrome 74+ (and other Chromium based browsers like Edge and Opera) on macOS, Windows, Linux and ChromeOS when sharing a browser tab, and the option is preselected</li>
     </ul>
-	<h2>Links:</h2>
-	<ul>
-		<li>Code for this demo on GitHub: <a target="_blank" href="https://github.com/addpipe/getDisplayMedia-demo">https://github.com/addpipe/getDisplayMedia-demo</a></li>
+  <h2>Links:</h2>
+  <ul>
+    <li>Code for this demo on GitHub: <a target="_blank" href="https://github.com/addpipe/getDisplayMedia-demo">https://github.com/addpipe/getDisplayMedia-demo</a></li>
     <li><a href="https://www.w3.org/TR/screen-capture/" target="_blank" rel="noopener noreferrer">Screen Capture W3C Working Draft</a></li>
     <li><a href="https://blog.addpipe.com/recording-the-screen-in-chrome-with-both-microphone-audio-and-system-sounds/" target="_blank" rel="noopener noreferrer">Chrome Tutorial: Recording The Screen With Both Microphone Audio AND System Sounds</a></li>
     <li><a href="https://blog.addpipe.com/screen-recording-with-system-sounds-in-chrome/" target="_blank" rel="noopener noreferrer">Product Announcement: Screen Recording With System Sounds In the Pipe Recording Client</a></li>
-	</ul>
+  </ul>
 </body>
 </html>
