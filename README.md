@@ -11,6 +11,7 @@ Works on:
 * Edge 79 and above
 * Firefox 66 and above
 * Opera 60 and above
+* Safari 13 and above
 
 Limitations:
 * Sharing the system audio is only possible on Chrome on Windows, and the user needs to opt in
