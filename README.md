@@ -1,4 +1,4 @@
-# Using getDisplayMedia to record the screen
+# Using getDisplayMedia to record the screen, system or browser tab audio, and the microphone
 
 [This demo](https://addpipe.com/get-display-media-demo/) uses `getDisplayMedia()` and the `Media Stream Recording API` to record the screen, your microphone & system audio on Chrome.
 
