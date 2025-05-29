@@ -21,5 +21,6 @@ To ensure both microphone and system audio are included in the final recording, 
 
 ## Links:
 * [Live demo of this code](https://addpipe.com/get-display-media-demo/)
-* [W3C Spec](https://www.w3.org/TR/screen-capture/)
-* [Blog post](https://blog.addpipe.com/screen-recording-with-system-sounds-in-chrome/)
+* [Screen Capture W3C Working Draft](https://www.w3.org/TR/screen-capture/)
+* [Chrome Tutorial: Recording The Screen With Both Microphone Audio AND System Sounds](https://blog.addpipe.com/recording-the-screen-in-chrome-with-both-microphone-audio-and-system-sounds/)
+* [Product Announcement: Screen Recording With System Sounds In the Pipe Recording Client](https://blog.addpipe.com/screen-recording-with-system-sounds-in-chrome/)
