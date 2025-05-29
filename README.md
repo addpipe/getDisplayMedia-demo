@@ -1,10 +1,10 @@
 # Using getDisplayMedia to record the screen, system or browser tab audio, and the microphone
 
-[This demo](https://addpipe.com/get-display-media-demo/) uses `getDisplayMedia()` and the `Media Stream Recording API` to record the screen, your microphone & system audio on Chrome.
+The code in this repo, [available here as a live demo](https://addpipe.com/get-display-media-demo/), uses `getDisplayMedia()` and the `MediaStream Recording API` to record the screen, your microphone & system or tab audio.
 
-When you click the “Share Screen” button, the browser may also offer the option to include system or tab audio. This is supported in browsers like Chrome. If you select that option, the demo captures the system audio directly from the screen stream.
+When you click the Share Screen button, Chrome and Chromium based browsers may also offer the option to include system or tab audio on supported operating systems (see below).
 
-To ensure both microphone and system audio are included in the final recording, the demo uses the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to combine the two audio sources in real-time. The microphone stream is captured using `getUserMedia()`, while the system audio is captured as part of the screen stream via `getDisplayMedia()`. These two audio tracks are mixed together and merged with the video track into a single stream. This composed stream is then passed to the `MediaRecorder`, which produces a single `.webm` file containing your screen video, microphone input, and system or tab audio, if available.
+To ensure both microphone and system audio are included in the final recording, the demo uses the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to combine the two audio sources in real time. The microphone stream is captured using `getUserMedia()`, while the system or tab audio is captured as part of the screen stream via `getDisplayMedia()`. These two audio tracks are mixed together and merged with the video track into a single stream. This composed stream is then passed to a `MediaRecorder` object, which produces a single `.webm` file containing your screen video, microphone input, and system or tab audio, if available.
 
 ## Requirements
 
