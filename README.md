@@ -14,9 +14,8 @@ Works on:
 * Safari 13 and above
 
 Limitations:
-* Sharing the system audio is only possible on Chrome on Windows, and the user needs to opt in
-* Sharing tab audio is possible on Chrome on macOS, Windows, and the option is preselected
-* Firefox and Safari do not support capturing system sounds or tab audio
+* Capturing system audio is possible on Chrome 74+ (and other Chromium based browsers like Edge and Opera) on Windows and ChromeOS when sharing the entire screen, and the user needs to opt in
+* Capturing tab audio is possible on Chrome 74+ (and other Chromium based browsers like Edge and Opera) on macOS, Windows, Linux and ChromeOS when sharing a browser tab, and the option is preselected
 
 Links:
 * [Live demo of this code](https://addpipe.com/get-display-media-demo/)
