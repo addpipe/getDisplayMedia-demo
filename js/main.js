@@ -1,7 +1,5 @@
 "use strict";
 
-var constraints = { video: true, audio: true };
-
 var shareBtn = document.querySelector("button#shareScreen");
 var recBtn = document.querySelector("button#rec");
 var stopBtn = document.querySelector("button#stop");
