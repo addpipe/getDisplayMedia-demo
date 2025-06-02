@@ -28,6 +28,13 @@ function onShareScreen() {
         "MediaRecorder not supported on your browser, use the latest version of Firefox or Chrome"
       );
     } else {
+      // End stream if active
+      if (localStream) {
+        localStream.getTracks().forEach((track) => {
+          track.stop();
+        });
+      }
+
       function getConstraintsFromUI() {
         const constraints = {};
         if (document.getElementById("useVideo").checked) {
