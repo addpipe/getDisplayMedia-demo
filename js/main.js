@@ -151,7 +151,7 @@ function getStreamSuccess(stream) {
   videoElement.play();
   videoElement.muted = true;
   recBtn.disabled = false;
-  shareBtn.disabled = true;
+  // shareBtn.disabled = true;
 
   try {
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
