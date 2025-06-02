@@ -70,6 +70,8 @@ function onShareScreen() {
 
       const displayMediaOptions = getConstraintsFromUI();
 
+      log(`Calling getDisplayMedia with the following constraints: ${JSON.stringify(displayMediaOptions, null, 2)}`);
+
       navigator.mediaDevices.getDisplayMedia(displayMediaOptions).then(function(screenStream) {
           //check for microphone
           navigator.mediaDevices.enumerateDevices().then(function(devices) {
