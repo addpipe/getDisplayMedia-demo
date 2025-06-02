@@ -30,7 +30,21 @@ function onShareScreen() {
         "MediaRecorder not supported on your browser, use the latest version of Firefox or Chrome"
       );
     } else {
-      navigator.mediaDevices.getDisplayMedia(constraints).then(function(screenStream) {
+      function getConstraintsFromUI() {
+        return {
+          video: document.getElementById("videoSelect").value === "true",
+          audio: document.getElementById("audioSelect").value === "true",
+          preferCurrentTab: document.getElementById("preferCurrentTabSelect").value === "true",
+          selfBrowserSurface: document.getElementById("selfBrowserSurfaceSelect").value,
+          systemAudio: document.getElementById("systemAudioSelect").value,
+          surfaceSwitching: document.getElementById("surfaceSwitchingSelect").value,
+          monitorTypeSurfaces: document.getElementById("monitorTypeSurfacesSelect").value,
+        };
+      }
+
+      const displayMediaOptions = getConstraintsFromUI();
+
+      navigator.mediaDevices.getDisplayMedia(displayMediaOptions).then(function(screenStream) {
           //check for microphone
           navigator.mediaDevices.enumerateDevices().then(function(devices) {
               devices.forEach(function(device) {

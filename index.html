@@ -6,7 +6,7 @@
   <meta name="description" content="Working browser based screen recording demo that uses the getDisplayMedia and getUserMedia JavaScript APIs to capture your screen, the microphone and system or tab sounds.">
   <base target="_blank">
   <title>Using getDisplayMedia to record the screen, system or browser tab audio, and the microphone</title>
-  
+  <link rel="canonical" href="https://addpipe.com/get-display-media-demo/"/>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -17,6 +17,107 @@
       <p>When you click the Share Screen button, Chrome and Chromium based browsers may also offer the option to include system or tab audio on supported operating systems (see below).</p>
       <p>To ensure both microphone and system audio are included in the final recording, the demo uses the <code>Web Audio API</code> to combine the two audio sources in real time. The microphone stream is captured using <code>getUserMedia()</code>, while the system or tab audio is captured as part of the screen stream via <code>getDisplayMedia()</code>. These two audio tracks are mixed together and merged with the video track into a single stream. This composed stream is then passed to a <code>MediaRecorder</code> object, which produces a single .webm file containing your screen video, microphone input, and system or tab audio, if available.</p>
       <video controls autoplay></video><br>
+      <details>
+        <summary>
+          Change <code>getDisplayMedia()</code> constraints
+        </summary>
+        <div class="code-block">
+          <div>{</div>
+    
+          <div class="line">
+            &nbsp;&nbsp;<span>video</span>:
+            <select id="videoSelect">
+              <option
+                value="true"
+                selected
+              >
+                true
+              </option>
+              <option value="false">false</option></select
+            >,
+          </div>
+    
+          <div class="line">
+            &nbsp;&nbsp;<span>audio</span>:
+            <select id="audioSelect">
+              <option
+                value="true"
+                selected
+              >
+                true
+              </option>
+              <option value="false">false</option></select
+            >,
+          </div>
+    
+          <div class="line">
+            &nbsp;&nbsp;<span><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#prefercurrenttab" target="_blank" rel="noopener noreferrer">preferCurrentTab</a></span>:
+            <select id="preferCurrentTabSelect">
+              <option value="true">true</option>
+              <option
+                value="false"
+                selected
+              >
+                false
+              </option></select
+            >,
+          </div>
+    
+          <div class="line">
+            &nbsp;&nbsp;<span><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#selfbrowsersurface" target="_blank" rel="noopener noreferrer">selfBrowserSurface</a></span>:
+            <select id="selfBrowserSurfaceSelect">
+              <option
+                value="exclude"
+                selected
+              >
+                exclude
+              </option>
+              <option value="include">include</option></select
+            >,
+          </div>
+    
+          <div class="line">
+            &nbsp;&nbsp;<span><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#systemAudio" target="_blank" rel="noopener noreferrer">systemAudio</a></span>:
+            <select id="systemAudioSelect">
+              <option
+                value="include"
+                selected
+              >
+                include
+              </option>
+              <option value="exclude">exclude</option></select
+            >,
+          </div>
+    
+          <div class="line">
+            &nbsp;&nbsp;<span><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#surfaceSwitching" target="_blank" rel="noopener noreferrer">surfaceSwitching</a></span>:
+            <select id="surfaceSwitchingSelect">
+              <option
+                value="include"
+                selected
+              >
+                include
+              </option>
+              <option value="exclude">exclude</option></select
+            >,
+          </div>
+    
+          <div class="line">
+            &nbsp;&nbsp;<span><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#monitorTypeSurfaces" target="_blank" rel="noopener noreferrer">monitorTypeSurfaces</a></span>:
+            <select id="monitorTypeSurfacesSelect">
+              <option
+                value="include"
+                selected
+              >
+                include
+              </option>
+              <option value="exclude">exclude</option></select
+            >,
+          </div>
+    
+          <div>}</div>
+        </div>
+      </details>
       <div id="controls">
         <button id="shareScreen" onclick="onShareScreen()">Share Screen</button>
         <button id="rec" onclick="onBtnRecordClicked()" disabled>Record</button>

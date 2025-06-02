@@ -124,3 +124,22 @@ button:disabled {
 button:first-child {
   margin-left: 0;
 }
+
+summary {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.code-block {
+  background: #222;
+  color: #dcdcdc;
+  padding: 20px;
+  border-radius: 8px;
+  width: fit-content;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.line>span>a {
+  color: #dcdcdc;
+}
