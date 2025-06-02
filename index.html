@@ -23,9 +23,14 @@
         </summary>
         <div class="code-block">
           <div>{</div>
-    
+        
           <div class="line">
-            &nbsp;&nbsp;<span>video</span>:
+            &nbsp;&nbsp;<input
+              type="checkbox"
+              id="useVideo"
+              checked
+            />
+            <span>video</span>:
             <select id="videoSelect">
               <option
                 value="true"
@@ -36,9 +41,14 @@
               <option value="false">false</option></select
             >,
           </div>
-    
+        
           <div class="line">
-            &nbsp;&nbsp;<span>audio</span>:
+            &nbsp;&nbsp;<input
+              type="checkbox"
+              id="useAudio"
+              checked
+            />
+            <span>audio</span>:
             <select id="audioSelect">
               <option
                 value="true"
@@ -49,9 +59,19 @@
               <option value="false">false</option></select
             >,
           </div>
-    
+        
           <div class="line">
-            &nbsp;&nbsp;<span><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#prefercurrenttab" target="_blank" rel="noopener noreferrer">preferCurrentTab</a></span>:
+            &nbsp;&nbsp;<input
+              type="checkbox"
+              id="usePreferCurrentTab"
+            />
+            <span
+              ><a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#prefercurrenttab"
+                target="_blank"
+                >preferCurrentTab</a
+              ></span
+            >:
             <select id="preferCurrentTabSelect">
               <option value="true">true</option>
               <option
@@ -62,9 +82,19 @@
               </option></select
             >,
           </div>
-    
+        
           <div class="line">
-            &nbsp;&nbsp;<span><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#selfbrowsersurface" target="_blank" rel="noopener noreferrer">selfBrowserSurface</a></span>:
+            &nbsp;&nbsp;<input
+              type="checkbox"
+              id="useSelfBrowserSurface"
+            />
+            <span
+              ><a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#selfbrowsersurface"
+                target="_blank"
+                >selfBrowserSurface</a
+              ></span
+            >:
             <select id="selfBrowserSurfaceSelect">
               <option
                 value="exclude"
@@ -75,9 +105,19 @@
               <option value="include">include</option></select
             >,
           </div>
-    
+        
           <div class="line">
-            &nbsp;&nbsp;<span><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#systemAudio" target="_blank" rel="noopener noreferrer">systemAudio</a></span>:
+            &nbsp;&nbsp;<input
+              type="checkbox"
+              id="useSystemAudio"
+            />
+            <span
+              ><a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#systemAudio"
+                target="_blank"
+                >systemAudio</a
+              ></span
+            >:
             <select id="systemAudioSelect">
               <option
                 value="include"
@@ -88,9 +128,19 @@
               <option value="exclude">exclude</option></select
             >,
           </div>
-    
+        
           <div class="line">
-            &nbsp;&nbsp;<span><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#surfaceSwitching" target="_blank" rel="noopener noreferrer">surfaceSwitching</a></span>:
+            &nbsp;&nbsp;<input
+              type="checkbox"
+              id="useSurfaceSwitching"
+            />
+            <span
+              ><a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#surfaceSwitching"
+                target="_blank"
+                >surfaceSwitching</a
+              ></span
+            >:
             <select id="surfaceSwitchingSelect">
               <option
                 value="include"
@@ -101,9 +151,19 @@
               <option value="exclude">exclude</option></select
             >,
           </div>
-    
+        
           <div class="line">
-            &nbsp;&nbsp;<span><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#monitorTypeSurfaces" target="_blank" rel="noopener noreferrer">monitorTypeSurfaces</a></span>:
+            &nbsp;&nbsp;<input
+              type="checkbox"
+              id="useMonitorTypeSurfaces"
+            />
+            <span
+              ><a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#monitorTypeSurfaces"
+                target="_blank"
+                >monitorTypeSurfaces</a
+              ></span
+            >:
             <select id="monitorTypeSurfacesSelect">
               <option
                 value="include"
@@ -114,7 +174,7 @@
               <option value="exclude">exclude</option></select
             >,
           </div>
-    
+        
           <div>}</div>
         </div>
       </details>

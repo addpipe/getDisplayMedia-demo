@@ -31,15 +31,36 @@ function onShareScreen() {
       );
     } else {
       function getConstraintsFromUI() {
-        return {
-          video: document.getElementById("videoSelect").value === "true",
-          audio: document.getElementById("audioSelect").value === "true",
-          preferCurrentTab: document.getElementById("preferCurrentTabSelect").value === "true",
-          selfBrowserSurface: document.getElementById("selfBrowserSurfaceSelect").value,
-          systemAudio: document.getElementById("systemAudioSelect").value,
-          surfaceSwitching: document.getElementById("surfaceSwitchingSelect").value,
-          monitorTypeSurfaces: document.getElementById("monitorTypeSurfacesSelect").value,
-        };
+        const constraints = {};
+        if (document.getElementById("useVideo").checked) {
+          constraints.video = document.getElementById("videoSelect").value === "true";
+        }
+      
+        if (document.getElementById("useAudio").checked) {
+          constraints.audio = document.getElementById("audioSelect").value === "true";
+        }
+      
+        if (document.getElementById("usePreferCurrentTab").checked) {
+          constraints.preferCurrentTab = document.getElementById("preferCurrentTabSelect").value === "true";
+        }
+      
+        if (document.getElementById("useSelfBrowserSurface").checked) {
+          constraints.selfBrowserSurface = document.getElementById("selfBrowserSurfaceSelect").value;
+        }
+      
+        if (document.getElementById("useSystemAudio").checked) {
+          constraints.systemAudio = document.getElementById("systemAudioSelect").value;
+        }
+      
+        if (document.getElementById("useSurfaceSwitching").checked) {
+          constraints.surfaceSwitching = document.getElementById("surfaceSwitchingSelect").value;
+        }
+      
+        if (document.getElementById("useMonitorTypeSurfaces").checked) {
+          constraints.monitorTypeSurfaces = document.getElementById("monitorTypeSurfacesSelect").value;
+        }
+      
+        return constraints;
       }
 
       const displayMediaOptions = getConstraintsFromUI();
