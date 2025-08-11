@@ -1,6 +1,6 @@
 # Using getDisplayMedia to record the screen, system or browser tab audio, and the microphone
 
-The code in this repo, [available here as a live demo](https://addpipe.com/get-display-media-demo/), uses `getDisplayMedia()` and the `MediaStream Recording API` to record the screen, your microphone & system or tab audio.
+The code in this repo, [available here as a live demo](https://addpipe.com/getdisplaymedia-demo/), uses `getDisplayMedia()` and the `MediaStream Recording API` to record the screen, your microphone & system or tab audio.
 
 When you click the Share Screen button, Chrome and Chromium based browsers may also offer the option to include system or tab audio on supported operating systems (see below).
 
@@ -20,7 +20,7 @@ To ensure both microphone and system audio are included in the final recording, 
 * Capturing tab audio is possible on Chrome 74+ (and other Chromium based browsers like Edge and Opera) on macOS, Windows, Linux and ChromeOS when sharing a browser tab, and the option is preselected
 
 ## Links:
-* [Live demo of this code](https://addpipe.com/get-display-media-demo/)
+* [Live demo of this code](https://addpipe.com/getdisplaymedia-demo/)
 * [Screen Capture W3C Working Draft](https://www.w3.org/TR/screen-capture/)
 * [Chrome Tutorial: Recording The Screen With Both Microphone Audio AND System Sounds](https://blog.addpipe.com/recording-the-screen-in-chrome-with-both-microphone-audio-and-system-sounds/)
 * [Product Announcement: Screen Recording With System Sounds In the Pipe Recording Client](https://blog.addpipe.com/screen-recording-with-system-sounds-in-chrome/)
