@@ -25,21 +25,28 @@
           <div>{</div>
         
           <div class="line">
-            &nbsp;&nbsp;<input
-              type="checkbox"
-              id="useVideo"
-              checked
-            />
+            &nbsp;&nbsp;<input type="checkbox" id="useVideo" checked />
             <span>video</span>:
             <select id="videoSelect">
-              <option
-                value="true"
-                selected
-              >
-                true
-              </option>
-              <option value="false">false</option></select
-            >,
+              <option value="true" selected>true</option>
+              <option value="false">false</option>
+            </select>,
+
+            <div class="nested">
+              &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="useDisplaySurface" />
+              <span>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia#displaysurface"
+                  target="_blank"
+                >displaySurface</a>
+              </span>:
+              <select id="displaySurfaceSelect">
+                <option value="monitor" selected>monitor</option>
+                <option value="window">window</option>
+                <option value="browser">browser</option>
+                <option value="application">application</option>
+              </select>
+            </div>
           </div>
         
           <div class="line">

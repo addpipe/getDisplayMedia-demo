@@ -38,7 +38,19 @@ function onShareScreen() {
       function getConstraintsFromUI() {
         const constraints = {};
         if (document.getElementById("useVideo").checked) {
-          constraints.video = document.getElementById("videoSelect").value === "true";
+          const videoEnabled = document.getElementById("videoSelect").value === "true";
+
+          if (videoEnabled) {
+            constraints.video = {};
+
+            if (document.getElementById("useDisplaySurface").checked) {
+              constraints.video.displaySurface = document.getElementById("displaySurfaceSelect").value;
+            } else {
+              constraints.video = true;
+            }
+          } else {
+            constraints.video = false;
+          }
         }
       
         if (document.getElementById("useAudio").checked) {

@@ -140,6 +140,7 @@ summary {
   text-decoration: none;
 }
 
-.line>span>a {
+.line>span>a,
+.nested>span>a  {
   color: #dcdcdc;
 }
